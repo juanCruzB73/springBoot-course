@@ -1,18 +1,15 @@
 package com.backend.example;
 
+import com.backend.example.BeansIntro.MyFirstService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class  ExampleApplication {
+public class ExampleApplicationApiRest {
 
 	public static void main(String[] args) {
 
-		var ctx = SpringApplication.run(ExampleApplication.class, args);
-
-		MyFirstService myFirstService=ctx.getBean( MyFirstService.class);
-		System.out.println(myFirstService.tellAStory());
-
+		SpringApplication.run(ExampleApplicationApiRest.class, args);
 	}
 
 }

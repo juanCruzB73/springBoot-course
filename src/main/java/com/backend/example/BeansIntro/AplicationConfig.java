@@ -1,4 +1,4 @@
-package com.backend.example;
+package com.backend.example.BeansIntro;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
