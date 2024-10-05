@@ -1,6 +1,5 @@
-package com.backend.example;
+package com.backend.example.exampleApiRest;
 
-import com.backend.example.BeansIntro.MyFirstService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

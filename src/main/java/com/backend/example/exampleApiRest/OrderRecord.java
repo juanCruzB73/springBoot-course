@@ -1,4 +1,4 @@
-package com.backend.example;
+package com.backend.example.exampleApiRest;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

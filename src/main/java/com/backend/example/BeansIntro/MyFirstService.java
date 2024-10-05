@@ -8,16 +8,16 @@ import org.springframework.context.annotation.PropertySources;
 import org.springframework.stereotype.Service;
 
 @Service
-@PropertySources({
+/*@PropertySources({
         @PropertySource("classpath:application.properties"),
         @PropertySource("classpath:custom.properties"),
-})
+})*/
 public class MyFirstService {
 
     private final MyFirstClass myFirstClass;
-    @Value("${my.aplication.property}")
+    //@Value("${my.aplication.property}")
     private String prop;
-    @Value("${my.custom.prop}")
+    //@Value("${my.custom.prop}")
     private String customProp;
 
     /*SETTER INJECTION*/
@@ -33,11 +33,11 @@ public class MyFirstService {
         return "the Bean is saying : "+myFirstClass.sayHello();
     }
 
-    public String getCustomProp() {
+    /*public String getCustomProp() {
         return customProp;
     }
 
     public String getProp() {
         return prop;
-    }
+    }*/
 }
