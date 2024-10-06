@@ -1,15 +1,23 @@
-package com.backend.example.exampleApiRest;
+package com.backend.example;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Student {
     @Id
-    private int id;
+    @GeneratedValue
+    private Integer id;
     private String name;
     private String lastName;
     private int age;
+
+    @OneToOne(mappedBy = "student",cascade = CascadeType.ALL)//IF STUDENT REMOVED WILL REMOVE STUDENPROFILE
+    private StudentProfile studentProfile;
+
+    @ManyToOne
+    @JoinColumn(name = "school_id")
+    private School school;
+
     public Student(){}
     public Student(String name, String lastName, int age) {
         this.name = name;
@@ -45,7 +53,23 @@ public class Student {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
+    }
+
+    public StudentProfile getStudentProfile() {
+        return studentProfile;
+    }
+
+    public void setStudentProfile(StudentProfile studentProfile) {
+        this.studentProfile = studentProfile;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
     }
 }

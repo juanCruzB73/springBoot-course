@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class MyFirstController {
     //get method
-    @GetMapping("/get")
+    @GetMapping("/get-2")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public String sayHello(){
         return "hello from controler";
     }
 
     //post method
-    @PostMapping("/post/order")
+    @PostMapping("/post/order-2")
     public String post(@RequestBody Order order){//converts the body from the http request into the java object needed
         return "Reques accepted, order is: "+order.toString();
     }
