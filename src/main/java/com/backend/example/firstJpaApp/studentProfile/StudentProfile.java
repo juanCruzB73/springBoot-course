@@ -1,5 +1,6 @@
-package com.backend.example;
+package com.backend.example.firstJpaApp.studentProfile;
 
+import com.backend.example.firstJpaApp.student.Student;
 import jakarta.persistence.*;
 
 @Entity

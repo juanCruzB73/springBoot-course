@@ -1,6 +1,5 @@
-package com.backend.example;
+package com.backend.example.firstJpaApp.student;
 
-import com.backend.example.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

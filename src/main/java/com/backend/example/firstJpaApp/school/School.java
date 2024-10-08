@@ -1,5 +1,7 @@
-package com.backend.example;
+package com.backend.example.firstJpaApp.school;
 
+import com.backend.example.firstJpaApp.student.Student;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -15,6 +17,7 @@ public class School {
 
     private String schoolName;
     @OneToMany(mappedBy = "school")
+    @JsonManagedReference//the parent is in charge of seriaizing the child
     private List<Student>students;
 
     public School(){}

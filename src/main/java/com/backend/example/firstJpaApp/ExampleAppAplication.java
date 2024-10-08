@@ -1,4 +1,4 @@
-package com.backend.example;
+package com.backend.example.firstJpaApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
